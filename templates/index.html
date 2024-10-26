@@ -1,0 +1,78 @@
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Alzheimer's Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="{{ url_for('paper_details') }}">Paper Details</a></li>
+        <li><a href="{{ url_for('model_details') }}">Model Details</a></li>
+        <li><a href="{{ url_for('grad_cam') }}">Grad-CAM Visualizations</a></li>
+        <li><a href="{{ url_for('descriptions') }}">Alzheimer's Stages Descriptions</a></li>
+    </ul>
+    </nav>
+
+    <h1>Upload MRI Image for Alzheimer's Prediction</h1>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Upload">
+    </form>
+    {% if file_data and prediction %}
+        <h2>Uploaded Image:</h2>
+        <img src="{{ file_data }}" alt="Uploaded image" style="max-width: 400px;">
+        <h2>Prediction: {{ prediction }}</h2>
+    {% endif %}
+    <!-- <a href="{{ url_for('descriptions') }}" class="link-button">View Alzheimer's Stages Descriptions</a>
+    <a href="{{ url_for('paper_details') }}" class="link-button">View Paper Details</a>
+    <a href="{{ url_for('model_details') }}" class="link-button">View Model Details</a>
+    <a href="{{ url_for('grad_cam') }}" class="link-button">View Grad-CAM Visualizations</a> -->
+
+    <!-- <a href="{{ url_for('descriptions') }}" class="link-button">View Alzheimer's Stages Descriptions</a> -->
+<!--
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alzheimer's Prediction Home</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="{{ url_for('paper_details') }}">Paper Details</a></li>
+            <li><a href="{{ url_for('model_details') }}">Model Details</a></li>
+            <li><a href="{{ url_for('grad_cam') }}">Grad-CAM Visualizations</a></li>
+            <li><a href="{{ url_for('descriptions') }}">Alzheimer's Stages Descriptions</a></li>
+        </ul>
+    </nav>
+
+    <h1>Upload MRI Image for Alzheimer's Prediction</h1>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="file">
+        <input type="submit" value="Upload">
+    </form>
+    {% if file_data and prediction %}
+        <h2>Uploaded Image:</h2>
+        <img src="{{ file_data }}" alt="Uploaded image" style="max-width: 400px;">
+        <h2>Prediction: {{ prediction }}</h2>
+    {% endif %}
+
+    <section id="about">
+        <h2>About This Project</h2>
+        <p>This web application is an ongoing project under development for detecting early stages of Alzheimer's Disease. The results provided by the tool are not 100% accurate and should not be used as a sole basis for any medical diagnosis.</p>
+        <p>This application is designed for research purposes only and was solely developed by Mohammad Rafsan at The University of Texas Rio Grande Valley. All rights reserved © 2024.</p>
+
+        <p><strong>Ethical Consideration:</strong> The use of this tool is intended for educational and research purposes. Users are advised to consult with healthcare professionals for any medical diagnosis or treatment decisions. Please respect privacy and ethical guidelines when using or sharing output from this tool.</p>
+    </section>
+
+    <!-- <a href="/" class="link-button">Back to Home</a> -->
+</body>
+</html>
+

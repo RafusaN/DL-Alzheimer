@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Paper Details - Deep Learning for Early Alzheimer Disease Detection</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="{{ url_for('paper_details') }}">Paper Details</a></li>
+            <li><a href="{{ url_for('model_details') }}">Model Details</a></li>
+            <li><a href="{{ url_for('grad_cam') }}">Grad-CAM Visualizations</a></li>
+            <li><a href="{{ url_for('descriptions') }}">Alzheimer's Stages Descriptions</a></li>
+        </ul>
+    </nav>
+
+    <h1>Deep Learning for Early Alzheimer Disease Detection with MRI Scans</h1>
+    <h2>Overview</h2>
+    <p>This project focuses on the application of deep learning models to enhance the early detection of Alzheimer's Disease (AD) using MRI scans. AD is a progressive neurodegenerative disorder that predominantly affects individuals over 40, leading to significant cognitive decline. Early diagnosis is crucial for effective disease management and treatment planning.</p>
+
+    <h2>Objectives</h2>
+    <ul>
+        <li><strong>Advance Deep Learning Model Adaptation and Optimization for Neuroimaging:</strong>
+            <ul>
+                <li>Assess the potential of various deep learning models in identifying early markers of AD.</li>
+                <li>Modify and fine-tune the architectures of CNN and U-net models to optimize their performance for neuroimaging applications.</li>
+            </ul>
+        </li>
+        <li><strong>Develop Methodologies to Address Data Imbalance in Medical Imaging:</strong>
+            <ul>
+                <li>Implement techniques to handle skewed data distributions in medical image datasets, enhancing data processing and model training efficacy.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>Methodology</h2>
+    <p><strong>Data Source:</strong> Utilized the Open Access Series of Imaging Studies (OASIS) brain MRI dataset, which includes scans from individuals with varying stages of AD. Data pre-processing involved converting MRI scans to a suitable format for deep learning models and addressing data imbalance using SMOTE-Tomek.</p>
+
+    <p><strong>Models Compared:</strong></p>
+    <ul>
+        <li><strong>CNN-based ADD-Net:</strong>
+            <ul>
+                <li>Incorporates SMOTE-Tomek for data balancing and Grad-CAM for visualizing relevant brain regions in MRI scans.</li>
+                <li>Achieved an accuracy of 93.96%, F1-score of 93.66%, recall of 93%, and precision of 93%.</li>
+            </ul>
+        </li>
+        <li><strong>BayesianCNN:</strong>
+            <ul>
+                <li>Introduces probabilistic weights using Variational Inference (Bayes by Backprop) to estimate uncertainty in predictions.</li>
+                <li>Implements the local re-parameterization trick for efficient and scalable Bayesian inference, translating global uncertainty into local, independent uncertainty across samples.</li>
+            </ul>
+        </li>
+        <li><strong>U-Net:</strong>
+            <ul>
+                <li>An encoder-decoder network designed for detailed image segmentation, particularly effective in capturing fine-grained spatial hierarchies in medical images.</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>Results</h2>
+    <p>The comparative analysis highlights the strengths and limitations of each model in terms of sensitivity, specificity, and computational efficiency. The study underscores the potential of AI in revolutionizing AD diagnostics and paves the way for future innovations in medical imaging and neurodegenerative disease management.</p>
+
+    <h2>Conclusion</h2>
+    <p>This research demonstrates the efficacy of deep learning models in enhancing the early detection of Alzheimer's Disease through MRI scans. By addressing data imbalance and optimizing model architectures, the study contributes significantly to the development of AI-driven diagnostic tools in neurology.</p>
+
+    <h2>Future Work</h2>
+    <p>The project suggests further research to refine these models and explore their applications in broader medical imaging contexts, aiming to improve diagnostic accuracy and patient outcomes in neurodegenerative disease management.</p>
+
+    <h2>Access to Code</h2>
+    <p>The source code for the implementations is available on GitHub: <a href="https://github.com/RafusaN/DL-Alzheimer.git">DL-Alzheimer</a>.</p>
+
+     <h2>References</h2>
+    <ol>
+        <li>Fareed, Mian Muhammad Sadiq, et al. "ADD-Net: an effective deep learning model for early detection of Alzheimer disease in MRI scans." IEEE Access 10 (2022): 96930-96951.</li>
+        <li>Shridhar, Kumar, Felix Laumann, and Marcus Liwicki. "A comprehensive guide to bayesian convolutional neural network with variational inference." arXiv preprint arXiv:1901.02731 (2019).</li>
+        <li>Kingma, Durk P., Tim Salimans, and Max Welling. "Variational dropout and the local reparameterization trick." Advances in neural information processing systems 28 (2015).</li>
+        <li>Fan, Zhonghao, et al. "U-net based analysis of MRI for Alzheimer’s disease diagnosis." Neural Computing and Applications 33 (2021): 13587-13599.</li>
+        <li>Marcus, Daniel S., et al. "Open access series of imaging studies: cross-sectional MRI data in nondemented and demented older adults." Journal of cognitive neuroscience 22.12 (2010): 2677-2684.</li>
+    </ol>
+    
+    <!-- <a href="/" class="link-button">Back to Home</a> -->
+</body>
+</html>

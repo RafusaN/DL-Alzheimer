@@ -1,0 +1,123 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+h1, h2 {
+    color: #355c7d;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin: 20px 0;
+}
+
+input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 2px solid #355c7d;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: inline-block;
+    cursor: pointer;
+}
+
+input[type="submit"], .link-button {
+    background-color: #355c7d;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+input[type="submit"]:hover, .link-button:hover {
+    background-color: #2a4560;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+}
+
+.description h2 {
+    color: #2A4D69;
+}
+
+.description p {
+    font-size: 16px;
+    color: #4F6457;
+}
+
+.description img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+}
+
+
+#about {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#about h2 {
+    color: #355c7d;
+}
+
+#about p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #355c7d; /* Updated to match the button color */
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: #2a4560; /* Updated to match the button hover color */
+}
+
+@media screen and (max-width: 600px) {
+    nav li {
+        float: none;
+    }
+}

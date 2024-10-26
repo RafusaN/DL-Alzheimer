@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grad-CAM Visualizations</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="{{ url_for('paper_details') }}">Paper Details</a></li>
+        <li><a href="{{ url_for('model_details') }}">Model Details</a></li>
+        <li><a href="{{ url_for('grad_cam') }}">Grad-CAM Visualizations</a></li>
+        <li><a href="{{ url_for('descriptions') }}">Alzheimer's Stages Descriptions</a></li>
+    </ul>
+    </nav>
+    
+    <h1>Grad-CAM Visualizations</h1>
+    <p>Grad-CAM (Gradient-weighted Class Activation Mapping) is a technique that uses gradients flowing into the last convolutional layer of a CNN to produce a coarse localization map highlighting the important regions in the image for predicting the concept. This method helps in visualizing which parts of the brain images the model is focusing on for its predictions, thereby revealing potential areas of interest for further analysis in medical diagnosis.</p>
+
+    <h2>Color Coding in Grad-CAM Visualizations</h2>
+    <ul>
+        <li><strong>Red and Yellow:</strong> Indicate regions with the highest significance in the model's decision-making. This often correlates with areas showing potential atrophy in Alzheimer's disease.</li>
+        <li><strong>Green and Blue:</strong> Represent areas of lesser importance, typically healthier regions of the brain or those less affected by the disease.</li>
+    </ul>
+
+    <h2>Examples of Grad-CAM Visualizations</h2>
+    <div>
+        <figure>
+            <figcaption>CNN-based ADD-Net Grad-CAM Visualization</figcaption>
+            <img src="{{ url_for('static', filename='images/grad_cam_add_net.png') }}" alt="CNN-based ADD-Net Grad-CAM">
+        </figure>
+        <figure>
+            <figcaption>BayesianCNN Grad-CAM Visualization</figcaption>
+            <img src="{{ url_for('static', filename='images/grad_cam_bayesiancnn.png') }}" alt="BayesianCNN Grad-CAM">
+        </figure>
+        <figure>
+            <figcaption>U-Net Model Grad-CAM Visualization</figcaption>
+            <img src="{{ url_for('static', filename='images/grad_cam_unet.png') }}" alt="U-Net Grad-CAM">
+        </figure>
+    </div>
+
+    <!-- <a href="/" class="link-button">Back to Home</a> -->
+</body>
+</html>

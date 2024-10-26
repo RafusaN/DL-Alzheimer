@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Model Details - BayesianCNN</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="{{ url_for('paper_details') }}">Paper Details</a></li>
+        <li><a href="{{ url_for('model_details') }}">Model Details</a></li>
+        <li><a href="{{ url_for('grad_cam') }}">Grad-CAM Visualizations</a></li>
+        <li><a href="{{ url_for('descriptions') }}">Alzheimer's Stages Descriptions</a></li>
+    </ul>
+    </nav>
+    
+    <h1>BayesianCNN Model Details</h1>
+    <p>The Bayesian Convolutional Neural Network (BayesianCNN) introduces a probabilistic approach to neural network weights, enhancing the model's ability to manage uncertainty in predictions. This capability is vital for applications in medical diagnosis, where decision-making under uncertainty is common.</p>
+
+    <h2>Key Features</h2>
+    <ul>
+        <li>Probabilistic Weights: Allows the network to express uncertainty, which is achieved using Variational Inference (VI).</li>
+        <li>Bayes by Backprop: Employs this methodology for approximating the true posterior distributions over weights with variational distributions, thereby managing the inherent uncertainty in model predictions.</li>
+        <li>Dual Convolution Operations: Each layer undergoes two sequential convolutional operations, one for estimating the mean and the other for the variance of the layer’s outputs, facilitating a robust framework for uncertainty.</li>
+        <li>Model Pruning: To manage the increase in model parameters due to Bayesian learning, strategies such as reducing the number of filters by half and applying the L1 norm for sparsity are implemented.</li>
+        <li>Performance: Demonstrates superior diagnostic accuracy and robustness, achieving an accuracy of 93.96% along with an F-1 score of 93.66%, showcasing its effectiveness in medical imaging applications.</li>
+    </ul>
+
+    <h2>Implementation and Results</h2>
+    <p>The BayesianCNN model was implemented using the OASIS dataset, with modifications to address data imbalances through techniques such as SMOTE-Tomek. The results highlight its high accuracy and the effective management of uncertainty in diagnosis, making it a promising tool for early detection of conditions like Alzheimer's Disease.</p>
+
+    <h2>CNN Model Description</h2>
+    <p>
+        The Convolutional Neural Network (CNN) employed in this study demonstrated excellent ability to handle 2D spatial data. With layers specifically designed to pick up patterns from image data, our CNN was pivotal in detecting subtle differences in brain MRI scans indicative of early Alzheimer's. Key features include:
+        <ul>
+            <li>Multiple convolutional layers that extract features at various levels of abstraction.</li>
+            <li>Dropout layers to prevent overfitting.</li>
+            <li>Activation functions like ReLU to introduce non-linearity, allowing for complex pattern recognition.</li>
+        </ul>
+    </p>
+
+    <h2>U-net Model Description</h2>
+    <p>
+        Our U-net model, adapted for Alzheimer's diagnosis, leverages an encoder-decoder architecture to effectively segment brain MRI images. It excels in capturing fine-grained spatial hierarchies, crucial for distinguishing between different stages of Alzheimer's:
+        <ul>
+            <li>A contracting path that captures context and a symmetric expanding path that enables precise localization.</li>
+            <li>Skip connections that improve the gradient flow through the network, aiding in the training of deeper models.</li>
+            <li>The use of up-convolutions and concatenation to combine features from different layers, enhancing the model's ability to predict with high resolution.</li>
+        </ul>
+    </p>
+
+    <!-- <a href="/" class="link-button">Back to Home</a> -->
+</body>
+</html>

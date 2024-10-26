@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Alzheimer's Stages Descriptions</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="{{ url_for('paper_details') }}">Paper Details</a></li>
+        <li><a href="{{ url_for('model_details') }}">Model Details</a></li>
+        <li><a href="{{ url_for('grad_cam') }}">Grad-CAM Visualizations</a></li>
+        <li><a href="{{ url_for('descriptions') }}">Alzheimer's Stages Descriptions</a></li>
+    </ul>
+    </nav>
+    
+    <h1>Stages of Alzheimer's</h1>
+    <div class="description">
+        <h2>1. Non Demented</h2>
+        <p>Individuals classified as Non Demented show no signs of dementia. Their cognitive functions, including memory, orientation, and judgment, remain intact, resulting in a CDR score of 0. They demonstrate normal daily functioning without any noticeable decline in various cognitive domains.</p>
+        <img src="{{ url_for('static', filename='testing-images/ND_OAS1_0001_MR1_mpr-1_100.jpg') }}" alt="Non Demented">
+        
+        <h2>2. Very Mild Dementia</h2>
+        <p>People with Very Mild Dementia exhibit very subtle cognitive difficulties, which may not significantly interfere with their daily activities. This stage, corresponding to a CDR score of 0.5, often includes slight memory lapses and minor disorientation that may go unnoticed in casual interactions but are detectable through careful clinical assessment.</p>
+        <img src="{{ url_for('static', filename='testing-images/VMD_OAS1_0022_MR1_mpr-3_110.jpg') }}" alt="Very Mild Dementia">
+        
+        <h2>3. Mild Dementia</h2>
+        <p>Mild Dementia involves more noticeable memory issues and a decline in cognitive functions. Individuals with a CDR score of 1 may experience challenges in navigating new environments, making complex decisions, and managing personal affairs, indicating a clear deviation from their previous level of functioning.</p>
+        <img src="{{ url_for('static', filename='testing-images/MD_OAS1_0052_MR1_mpr-4_101.jpg') }}" alt="Mild Dementia">
+        
+        <h2>4. Moderate Dementia</h2>
+        <p>This stage represents a moderate to severe level of cognitive decline, with a CDR score ranging from 2 to 3. Individuals require substantial assistance with daily activities. They show significant impairments in memory, orientation, judgment, and personal care, impacting their ability to live independently.</p>
+        <img src="{{ url_for('static', filename='testing-images/MOD_OAS1_0351_MR1_mpr-4_100.jpg') }}" alt="Moderate Dementia">
+    </div>
+    <!-- <a href="/" class="link-button">Back to Home</a> -->
+</body>
+</html>
